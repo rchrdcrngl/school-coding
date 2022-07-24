@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.mp2.web.LoginServlet</servlet-class>
+        <init-param>
+            <param-name>uname</param-name>
+            <param-value>mp2username</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pword</param-name>
+            <param-value>12345678</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>PortfolioServlet</servlet-name>
+        <servlet-class>com.mp2.web.PortfolioServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PortfolioServlet</servlet-name>
+        <url-pattern>/portfolio</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>header</param-name>
+        <param-value>My Personal Portfolio</param-value>
+    </context-param>
+    <context-param>
+        <param-name>footer</param-name>
+        <param-value>MP2 By Richard Caringal and Charles Pagulayan 2CSC</param-value>
+    </context-param>
+</web-app>

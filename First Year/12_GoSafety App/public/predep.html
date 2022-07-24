@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Before You Depart - GoSafety</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script type="text/javascript" src= "https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+	<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+<!--===============================================================================================-->	
+<link rel="icon" type="image/png" href="icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/54e22db505.js" crossorigin="anonymous"></script>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="scripts/predep.js"></script>
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-home">
+                <div class="row justify-content-between">
+                    
+                    <div class="col-9">
+                        <span class="homecontainer-title">Before You Depart</span>
+                    </div>
+                    <div class="col-3">
+                        <button class="home-submit black" id="submit" onclick="cancel()"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+
+				  <div class="row">
+					<div class="col-12">
+						<label class="checklist">
+							negative COVID‑19 molecular test taken up to 72 hours before their scheduled departure time
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						  </label>
+					</div>
+					<div class="col-12">
+						<label class="checklist">
+							submit to a health check and answer the following questions at check‑in
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						  </label>
+					</div>
+				  </div>
+
+                  <div class="row justify-content-between">
+                    
+                    <div class="col-1">
+                        <button class="navbtn blue" id="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-3">
+                        <button class="navbtn mint" id="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                  
+				
+					  
+			</div>
+			<a href="#" onclick="openEmergency()" class="float-menu">
+				<i class="fa fa-exclamation-triangle my-float" aria-hidden="true"></i>
+			</a>
+			<a href="#" onclick="openMenu()" class="float-emergency">
+				<i class="fa fa-ellipsis-h my-float" aria-hidden="true"></i>
+			</a>
+			<div id="map" class="map"></div>
+		</div>
+		
+	</div>
+
+		<!-- The Modal -->
+	<div id="myModal" class="modal reminder">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h6 class="rem-title purpletxt">MAINTAIN 1-2 METERS SOCIAL DISTANCING</h6>
+				<a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html" class="purpletxt">Click here to learn more...</a>
+			</div>
+	
+	</div>
+
+	<div id="menuModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="rectangle-container purplebd">
+				<h6 class="reccon-title purpletxt">COVID-19 Cases:<div id="reccon-title"></div></h6>
+				Confirmed:<div id="confirmed"></div>Active Cases:<div id="activecases"></div>Recovered:<div id="recovered"></div>
+					Death:<div id="death"></div>Last Updated:<i><div id="dateUpdated"></div></i>
+			</div>
+			<div class="row">
+				<div class="col-12 container-btn100">
+					<div class="btn100-frm yellow">
+						<a class="btn100-frm-btn" href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/coronavirus-safety.html">
+							COVID Tips
+						</a>
+					</div>
+				</div>
+				<div class="col-12 container-btn100">
+					<div class="btn100-frm dark-teal">
+						<button class="btn100-frm-btn" onclick="editprof()">
+							Edit Profile
+						</button>
+					</div>
+				</div>
+				<div class="col-12 container-btn100">
+					<div class="btn100-frm red">
+						<button class="btn100-frm-btn" onclick="logout()">
+							Logout
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="emergencyModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="rectangle-container yellowbd">
+				<h6 class="reccon-title">Have symptoms like...</h6>
+				<p>fever<br/>dry cough<br/>tiredness<br/>difficulty in breathing/shortness of breath<br/>
+					chest pain or pressure<br/>loss of speech or movement</p>
+				<h6 class="reccon-title">or have been in contact with...</h6>
+				<p>Asymptomatic patients <br/>Confirmed positve patients</p>
+			</div>
+			<div class="row">
+				<div class="col-12 container-btn100">
+					<div class="btn100-frm yellow">
+						<button class="btn100-frm-btn" onclick="covid()">
+							COVID-19 Emergency Hotline
+						</button>
+					</div>
+				</div>
+				<div class="col-12 container-btn100" onclick="otherem()">
+					<div class="btn100-frm red">
+						<button class="btn100-frm-btn">
+							Other Emergencies
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+
+	<script>
+		var country = localStorage.getItem("country");
+		document.getElementById("reccon-title").innerText = country;
+
+		function hidecontent(){
+		document.getElementById("wrap-home").style.display = "none";
+		document.getElementById("show-btn").style.display = "block";
+		}
+
+		function showcontent(){
+		document.getElementById("wrap-home").style.display = "block";
+		document.getElementById("show-btn").style.display = "none";
+		}
+
+		function editprof(){
+			window.location.replace("editprofile.html");
+		}
+
+		function logout(){
+			sessionStorage.setItem("login", "false");
+			window.location.replace("login.html");
+		}
+
+		function covid(){
+			window.open('tel:12345');
+		}
+
+		function otherem(){
+			window.open('tel:12345');
+		}
+
+		var menu = document.getElementById("menuModal");
+		var emergency = document.getElementById("emergencyModal");
+
+		function openMenu(){
+		menu.style.display = "block";
+		}
+
+		function openEmergency(){
+		emergency.style.display = "block";
+		}
+
+		var modal = document.getElementById("myModal");
+		var span = document.getElementsByClassName("close")[0];
+	
+		//Reminder module
+		var today = new Date();
+		var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		var rem = localStorage.getItem("rem");
+		if (rem != date){
+			modal.style.display = "block";
+			localStorage.setItem("rem", date);
+		}
+	
+	
+		// When the user clicks on <span> (x), close the modal
+		document.getElementsByClassName("close")[0].onclick = function() {
+			modal.style.display = "none";
+		}
+		document.getElementsByClassName("close")[1].onclick = function() {
+			menu.style.display = "none";
+		}
+		document.getElementsByClassName("close")[2].onclick = function() {
+			emergency.style.display = "none";
+		}
+	
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+
+		var dest = localStorage.getItem("dest");
+		var long = localStorage.getItem("long");
+		var lat = localStorage.getItem("lat");
+		console.log(long+","+lat);
+
+		
+		var map = new ol.Map({
+		target: 'map',
+		layers: [
+			new ol.layer.Tile({
+			source: new ol.source.OSM()
+			})
+		],
+		view: new ol.View({
+			center: ol.proj.fromLonLat([lat, long]),
+			zoom: 7
+		})
+		});
+	</script>
+
+    
+</body>
+</html>

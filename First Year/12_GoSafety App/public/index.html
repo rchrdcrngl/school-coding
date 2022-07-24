@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoSafety</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="icons/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div class="center-screen">
+      <img src="res/logo.png" alt="logo" height="100" width="100">
+      </div>
+    <script>
+      window.setTimeout(login, 3000);
+      function login(){
+        var isLogin = sessionStorage.getItem("login");
+        if (isLogin=="true") window.location.replace("home.html");
+        else window.location.replace("login.html");
+      }
+    </script>
+  </body>
+</html>
+
+

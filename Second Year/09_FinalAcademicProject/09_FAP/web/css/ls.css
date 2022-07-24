@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    /*background-color: #232B40;*/
+    background: linear-gradient(#141e30, #243b55);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container a{
+    text-decoration:none;
+    color:none;
+}
+.container a:visited{
+    color:white;
+    text-decoration:none;
+}
+
+.container{
+    width: 350px;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin: 0px auto;
+    margin-top: 60px;
+    margin-bottom:60px;
+    text-align: center;
+    background-color: rgba(95, 158, 160, 0.43);
+}
+
+
+input[type="text"],input[type="password"]{
+    width: 250px;
+    height: 37px;
+    font-family: 'VT323', monospace;
+    margin-bottom: 30px;
+    padding-left: 35px;
+    font-size: 18px;
+}
+.input_box::before{
+    content:url(https://res.cloudinary.com/dejzo3x6l/image/upload/v1462601843/login%20page%20design/user.png);
+    position: absolute;
+    padding: 3.2px;
+    overflow:hidden;
+    background-color: #1abc9c;
+}
+.submit_btn{
+    background-color:rgb(214, 119, 49);
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding:10px 30px;
+    margin-bottom: 10px;
+    border: none;
+    font-family: 'VT323', monospace;
+    transition: background-color .2s;
+    margin-bottom: 10px;
+}
+.submit_btn:hover{
+    background-color:rgb(247, 136, 55);
+    cursor: pointer;
+}
+
+a.for_pass{
+    color: #d1cfcf;
+    font-family: 'VT323', monospace;
+}
+a.for_pass:hover{
+    color:white;
+}
+.recaptcha_image{
+    width: 250px !important;
+    height: 65px !important;
+}
+.ls-error{
+    background-color: #fab1a0;
+    color: #d63031;
+    padding: 10px;
+    margin-left: 20%;
+    margin-right:20%;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+}

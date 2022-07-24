@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #456;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard {
+    width: 400px;
+    margin: 16px auto;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.dashboard-header,
+.dashboard p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.dashboard-header {
+    background: #f1c40f;
+    padding: 20px;
+    font-size: 1.4em;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.dashboard-container {
+    background: #ebebeb;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Every row inside .dashboard-container is defined with p tags */
+.dashboard p {
+    padding: 12px;
+}
+
+.dashboard input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+}
+
+.dashboard input[type="email"],
+.dashboard input[type="password"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+}
+
+/* Text fields' focus effect */
+.dashboard input[type="email"]:focus,
+.dashboard input[type="password"]:focus {
+    border-color: #888;
+}
+
+.dashboard .btn {
+    background: #f39c12;
+    border-color: transparent;
+    font-family: 'VT323', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.dashboard .btn:hover {
+    background: #16a085;
+}
+
+/* Buttons' focus effect */
+.dashboard .btn:focus {
+    border-color: #16a085;
+}
+
+.dashboard a{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-color: #232B40;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-size:1em; 
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    line-height:1em;
+    padding-bottom: 2em;
+    color: White;
+}
+
+h2 a {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FB667A;
+    text-decoration: none;
+}
+
+.blue { color: #185875; }
+.yellow { color: #FFF842; }
+
+.container th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+
+.container td {
+    padding:10px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.container {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    table-layout:auto;
+}
+.container a{
+    text-decoration: none;
+}
+
+.container td, .container th {
+    text-align: center;
+    align-content: center;
+    padding-top:1%;
+    min-width: 80px;
+}
+
+.container tr{
+    background-color: #FFFF;
+}
+
+.container th {
+    background-color: #28d;
+    text-align: center;
+}
+
+.container td:first-child { color: #FB667A; }
+
+.container tr:hover {
+    background-color: #464A52;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+
+/*
+    @media (max-width: 900px) {
+        .container td:nth-child(2),.container td:nth-child(6),.container td:nth-child(7),.container td:nth-child(8),.container td:nth-child(9),
+        .container th:nth-child(2),.container th:nth-child(6),.container th:nth-child(7),.container th:nth-child(8),.container th:nth-child(9) { display: none; }
+        .container {
+            width:80%;
+        }
+    }
+*/

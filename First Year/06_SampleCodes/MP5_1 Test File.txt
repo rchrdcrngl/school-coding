@@ -1,0 +1,23 @@
+Line #23	Declaration made after assignment
+Line #28	Change to Not Equal
+Line #30	Orphaned Case (missing switch keyword)
+Line #31	Wrong Case Condition Value (change case value from 1 to 3)
+Line #35	Change string value from Area to Volume
+Line #35	Missing backslash before "n"
+Line #35	Wrong Method Called (change to cylinder())
+Line #35	Wrong Parameters passed (change to radius,height)
+Line #38	Wrong Case Condition Value (change case condition value from 3 to 2)
+Line #43	Missing backslash before "n"
+Line #42	Wrong Method Called (change to circle())
+Line #45	Wrong Case Condition Value (change case value from 2 to 1)
+Line #46	Moved declaration from case 3 to case 1
+Line #50	Change string value from Volume to Area
+Line #50	Missing backslash before "n"
+Line #50	Wrong Method Called (change to rectangle())
+Line #50	Wrong Parameters passed (change to length,width)
+Line #63	Missing closing bracket for while loop
+Line #64	Missing closing bracket for main method
+Line #70	Wrong variable (change r to w)
+Line #75	Missing return keyword
+Line #75	Wrong variable (change w to r)
+Line #80	Wrong variable (change l to h)

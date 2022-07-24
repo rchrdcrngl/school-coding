@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.record-group{
+    border-color: #8e44ad;
+    background-color: #d2c9d6;
+    border-style: solid;
+    padding: 10px 5px 1px 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.record-individual-container{
+    display: flex;
+}
+.record-individual-container > div{
+    flex: 1 1 auto;
+    justify-content:space-between;
+    margin: 10px;
+}
+.record-individual{
+    background-color: #fcedae;
+    color: #ebbc02;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding:5px;
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.record-individual .dosage-no{
+    font-size:4em;
+    flex-basis:7%;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding:5px 15px 5px 15px;
+}
+.record-individual .other-data{
+    flex-basis: 93%;
+    font-size:10pt;
+}
+.record-group .group-header .header-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    font-weight: 700;
+    color:#8e44ad;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+.record{
+    background-color: #34495e;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.record:hover{
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+}
+.record .record-data{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.record .record-data .dosage-no{
+    background-color: #f1c40f;
+    color: white;
+    font-size:4em;
+    flex-basis:7%;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding:15px;
+}
+.record .record-data .other-data{
+    flex-basis: 93%;
+    padding:15px;
+}
+
+.record .record-data a{
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.record .record-data button{
+    background-color: inherit;
+    border:none;
+    font-size: inherit;
+    font-family: inherit;
+    color:inherit;
+}
+
+body{
+    margin: 0;
+    font-weight: 400;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #1abc9c;
+    padding:20px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.header p{
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.header .logo {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.header a:hover {
+    background-color: #16a085;
+    color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.header a.active {
+    background-color: #107d68;
+    color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.header-right {
+    float: right;
+}
+
+
+.footer {
+    position: fixed;
+    padding: 10px 0px;
+    left: 0;
+    bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    background-color: #636e72;
+    color: white;
+    text-align: center;
+}
+
+.footer p{
+    font-size:15px;
+}
+
+.container{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 170px auto;
+}
+.error-container{
+    max-width: 440px;
+    padding: 0 20px;
+    margin: 170px auto;
+}
+.frm{
+    width: 100%;
+    border: 1px solid #1abc9c;
+    border-radius: 5px;
+    background:#a7d6cd;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.frm .title{
+    color:#2a7566;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 0px 0px;
+}
+.error-box{
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.error-box .title{
+    height: 90px;
+    background: #e46b64;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.frm form{
+    padding:10px;
+}
+
+.frm form input{
+    width: 100%;
+    height: 40px;
+    transition: all 0.3s ease;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid lightgrey;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.frm form .row input{
+    background-color: black;
+}
+
+
+.frm form button{
+    color: #fff;
+    font-size: 10pt;
+    padding:5px;
+    background: #1abc9c;
+    margin:5px;
+    border: hidden;
+    border-radius: 20px;
+}
+form button:hover{
+    background: #f1c40f;
+}
+
+.login-container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 20vh auto;
+}
+.frm-container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 10vh auto;
+  align-content: center;
+}
+.login-frm{
+  width: 100%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.frm2{
+  width: 100%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.frm2 .row div{
+    margin-right: 10px;
+}
+.frm2 form button{
+    color: #fff;
+    font-size: 10pt;
+    padding:5px;
+    margin:15px 0px;
+    width: 100%;
+    height:40px;
+    background: #1abc9c;
+    border: hidden;
+    border-radius: 10px;
+}
+.login-frm .title{
+  border-radius: 5px 5px 0 0;
+  color: black;
+  padding: 30px 5px;
+  font-size: 2em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frm2 .title{
+  border-radius: 5px 5px 0 0;
+  color: black;
+  padding: 15px;
+  font-size: 18pt;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-frm form{
+    padding:10px 20px 20px 20px;
+}
+
+.frm2 form{
+    padding:10px 10px 10px 20px;
+}
+
+.login-frm form input{
+  width: 100%;
+  transition: all 0.3s ease;
+  outline: none;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.frm2 form input{
+  width: 100%;
+  transition: all 0.3s ease;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+
+form input:focus{
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form input::placeholder{
+  color: #999;
+}
+
+.login-frm form .button{
+  color: #fff;
+  font-size: 12pt;
+  background: #1abc9c;
+  border: hidden;
+  border-radius: 20px;
+}
+form .button:hover{
+  background: #0f6b59;
+}
+
+
+/* Split the screen in half */
+.content{
+    height: 100%;
+}
+.split {
+    height:100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+    left: 0;
+    width: 30%;
+}
+
+/* Control the right side */
+.right {
+    right: 0;
+    width: 70%;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex-basis: 20%;
+    padding: 20px;
+    position: sticky;
+}
+
+/* Main column */
+.main {
+    flex-basis: 80%;
+    height: 80vh; 
+    overflow: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: text-bottom;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.bg{
+    opacity:0.5;
+    position:absolute;
+    left:0;
+    z-index:-2;
+    top:0;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 750px) {
+
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+        font-size: 13px;
+        line-height:18px;
+    }
+    .header a.logo {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .header-right {
+        float: none;
+    }
+    .header-right a{
+        font-size: 13px;
+    }
+    .container{
+        margin:10px;
+        width:100%;
+        padding: 0 20px;
+        margin: 170px auto;
+    }
+    .error-box .title{
+        height:60px;
+        font-size:20px;
+    }
+    .frm .title{
+        height:60px;
+        font-size:20px;
+        font-weight: bold;
+    }
+
+    .frm form input{
+        font-size:15px;
+    }
+
+    .frm form .button{
+        font-size:15px;
+    }
+    .footer {
+        font-size: 10px;
+    }
+    .record{
+        margin-bottom: 15px;
+        display:block;
+        overflow: hidden;
+    }
+
+    .record .record-data .dosage-no{
+        align-items: center;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+    }
+    .record .record-data .other-data{
+        margin-left: 10px;
+        padding:10px;
+    }
+    
+    .row{
+        flex-direction:column;
+    }
+    
+    .home-container{
+        overflow:auto;
+        position:fixed;
+        padding-bottom: 15px;
+    }
+    
+    .main{
+        flex:1;
+    }
+    
+    .side{
+        flex:1;
+    }
+    
+    .record-individual-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .record-individual-container > div{
+        flex: 1;
+        margin: 10px;
+    }
+    .frm2 .row div{
+        margin-right: 0px;
+    }
+    .frm2 form{
+        padding:10px 20px 10px 20px;
+    }
+}
