@@ -1,6 +1,8 @@
 # GoSafety App
  - HTML, CSS, JavaScript website
  - Mockup of app proposal
+ - Uses third party APIs for maps and COVID statistics
+ - Responsive 
 
 1. Login
 
